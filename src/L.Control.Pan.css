@@ -1,3 +1,17 @@
+/*
+    Make the fullscreen plugin control
+    (https://github.com/Leaflet/Leaflet.fullscreen)
+    align with the pan control.
+ */
+.leaflet-left.has-leaflet-pan-control .leaflet-control-fullscreen {
+    position: relative;
+    left: 24px;
+}
+.leaflet-right.has-leaflet-pan-control .leaflet-control-fullscreen {
+    position: relative;
+    right: 24px;
+}
+
 /* Make the default zoom control align with the pan control.
    
    This is ugly. 

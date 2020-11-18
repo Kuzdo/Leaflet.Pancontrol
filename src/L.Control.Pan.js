@@ -54,23 +54,6 @@
 			return container;
 		},
 
-		onRemove: function (map) {
-			// Remove pan control class to the control container
-			var controlContainer;
-			if (this.options.position === 'topleft') {
-				controlContainer = L.DomUtil.get(map._controlCorners.topleft);
-			} else if (this.options.position === 'topright') {
-				controlContainer = L.DomUtil.get(map._controlCorners.topright);
-			} else if (this.options.position === 'bottomleft') {
-				controlContainer = L.DomUtil.get(map._controlCorners.bottomleft);
-			} else {
-				controlContainer = L.DomUtil.get(map._controlCorners.bottomright);
-			}
-			if (L.DomUtil.hasClass(controlContainer, 'has-leaflet-pan-control')) {
-				L.DomUtil.removeClass(controlContainer, 'has-leaflet-pan-control');
-			}
-		},
-
 		_panButton: function (title, className, container, map, offset) {
 			var wrapper = L.DomUtil.create('div', className + '-wrap', container);
 			var link = L.DomUtil.create('a', className, wrapper);
